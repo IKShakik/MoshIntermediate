@@ -1,27 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MoshIntermediate
 {
-    public class Calculator
-    {
-        public int Add(params int[] numbers)
-        {
-            var sum = 0;
-            foreach (var number in numbers)
-            {
-                sum += number;
-            }
-            return sum;
-        }
-    }
 
     class Program
     {
         static void Main(string[] args)
+        {
+            var customer = new Customer(1);
+            customer.Orders.Add(new Order());
+            customer.Orders.Add(new Order());
+
+            customer.Promote();
+
+            Console.WriteLine(customer.Orders.Count);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        static void UseTry()
         {
             int number;
             var num = int.TryParse("abc", out number);

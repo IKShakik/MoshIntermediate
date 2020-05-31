@@ -10,6 +10,9 @@ namespace MoshIntermediate
     {
         static void Main(string[] args)
         {
+            var person = new Person(new DateTime(1995, 12, 03));
+            Console.WriteLine(person.Age);
+
             var customer = new Customer(1);
             customer.Orders.Add(new Order());
             customer.Orders.Add(new Order());
@@ -20,7 +23,7 @@ namespace MoshIntermediate
         }
 
 
-
+        
 
 
 
